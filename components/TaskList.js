@@ -6,7 +6,7 @@
 //  Borda esquerda colorida (verde para concluída, azul para pendente)
 
 import { View } from "react-native";
-import styled from "styled-components";
+import styled from "styled-components/native";
 
 const TaskList = styled.View`
   padding: 20px;
@@ -23,7 +23,8 @@ const TaskItem = styled.View`
 
 const TaskText = styled.Text`
   font-size: 16px;
-  text-decoration-line: ${(props) => (props.completed ? "line-through" : "none")};
+  text-decoration-line: ${(props) =>
+    props.completed ? "line-through" : "none"};
 `;
 
 const TaskListComponent = ({ tasks }) => {
